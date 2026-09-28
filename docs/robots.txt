@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://moje-vychytavky.pages.dev/sitemap.xml
