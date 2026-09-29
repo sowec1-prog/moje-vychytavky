@@ -40,9 +40,8 @@
     noResults.classList.toggle('visible', visible === 0);
   }
   search.addEventListener('input', applySearch);
-  // The static GitHub Pages version keeps categories working without a server.
+  // The static deployment filters categories in the browser on every host.
   document.querySelectorAll('.filter').forEach((filter) => filter.addEventListener('click', (event) => {
-    if (!location.hostname.endsWith('github.io')) return;
     event.preventDefault();
     const category = filter.dataset.category;
     cards.forEach((card) => { card.hidden = Boolean(category) && card.dataset.category !== category; });
