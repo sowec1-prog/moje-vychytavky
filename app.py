@@ -7,6 +7,7 @@ and provides a generated tracking link.
 from __future__ import annotations
 
 import os
+from urllib.parse import unquote
 
 from flask import Flask, jsonify, render_template, request
 
@@ -21,7 +22,7 @@ app = Flask(__name__)
 def index():
     category = request.args.get("category", "")
     products = [
-        {**item, "image": PRODUCT_IMAGES[item["url"]]}
+        {**item, "image": PRODUCT_IMAGES[unquote(item["url"].split("desturl=", 1)[1])]}
         for item in PRODUCTS
         if not category or item["category"] == category
     ]

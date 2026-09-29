@@ -7,8 +7,15 @@ provides generated tracking links. No price or availability is asserted here.
 from __future__ import annotations
 
 from collections import Counter
+from urllib.parse import quote
 
-BASE = "https://www.cubenest.cz"
+MERCHANT_BASE = "https://www.cubenest.cz"
+EHUB_CLICK_BASE = "https://ehub.cz/system/scripts/click.php?a_aid=391b26f8&a_bid=231eaccc&desturl="
+
+
+def tracked_cubenest_url(path: str) -> str:
+    """Verified eHUB deeplink format for an approved Cubenest product URL."""
+    return EHUB_CLICK_BASE + quote(MERCHANT_BASE + path, safe="")
 
 # (category, product-page path).  Every item has a distinct real product page.
 PRODUCT_PATHS = [
@@ -97,7 +104,10 @@ def _display_name(path: str) -> str:
     return slug.replace("qi2", "Qi2").replace("qi22", "Qi2.2").replace("gan", "GaN").replace("pd", "PD").replace("usb", "USB").title().replace("Usb", "USB").replace("Gan", "GaN").replace("Pd", "PD").replace("Qi2", "Qi2").replace("Qi22", "Qi2.2")
 
 
-PRODUCTS = tuple({"category": category, "title": _display_name(path), "url": BASE + path} for category, path in PRODUCT_PATHS)
+PRODUCTS = tuple(
+    {"category": category, "title": _display_name(path), "url": tracked_cubenest_url(path)}
+    for category, path in PRODUCT_PATHS
+)
 CATEGORIES = tuple(category for category, _ in Counter(item["category"] for item in PRODUCTS).items())
 
 # Official product imagery, used only to visually identify the matching category.
