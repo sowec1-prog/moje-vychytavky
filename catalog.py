@@ -104,9 +104,37 @@ def _display_name(path: str) -> str:
     return slug.replace("qi2", "Qi2").replace("qi22", "Qi2.2").replace("gan", "GaN").replace("pd", "PD").replace("usb", "USB").title().replace("Usb", "USB").replace("Gan", "GaN").replace("Pd", "PD").replace("Qi2", "Qi2").replace("Qi22", "Qi2.2")
 
 
-PRODUCTS = tuple(
-    {"category": category, "title": _display_name(path), "url": tracked_cubenest_url(path)}
-    for category, path in PRODUCT_PATHS
+EVOLVEO_CLICK_BASE = "https://ehub.cz/system/scripts/click.php?a_aid=391b26f8&a_bid=f89ce7c7&desturl="
+
+
+def tracked_evolveo_url(path: str) -> str:
+    """Verified eHUB deeplink format for an approved EVOLVEO product URL."""
+    return EVOLVEO_CLICK_BASE + quote("https://eshop.evolveo.cz" + path, safe="")
+
+
+# Live products selected from the public EVOLVEO catalogue on 2026-09-29.
+EVOLVEO_PRODUCTS = (
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision LTE CLOUD – 4G fotopast s Cloud/Email", "/evolveo-strongvision-lte-cloud-fotopast-s-4g--cloud-email--32gb/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7441-1_evolveo-strongvision-lte-cloud-fotopast-s-4g--cloud-email--32gb.jpg?ff=1&x=100&y=100&q=85&ts=688c4708&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision LTE MINI – 4G fotopast se solárním napájením", "/evolveo-strongvision-lte-mini---4g-fotopast-s-cloud-email-prenosem-a-solarnim-napajenim/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/8411_evolveo-strongvision-lte-mini-8211--4g-fotopast-s-cloud-email-p--345-enosem-a-solarnim-napajenim.jpg?ff=1&x=100&y=100&q=85&ts=69dc947a&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision Compact 4K fotopast", "/evolveo-strongvision-compact-4k--fotopast-casosberna-kamera-32gb/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7567_evolveo-strongvision-compact-4k--fotopast-269-asosb--283-rna-kamera-32gb.jpg?ff=1&x=100&y=100&q=85&ts=688c4708&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision LTE POWER – 4G fotopast", "/evolveo-strongvision-lte-power---4g-fotopast-s-cloud-email-prenosem-a-vymennymi-21700-bateriemi/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/8414_evolveo-strongvision-lte-power-8211--4g-fotopast-s-cloud-email-p--345-enosem-a-vym--283-nnymi-21700-bateriemi.jpg?ff=1&x=100&y=100&q=85&ts=69dc947f&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision Dual PRO 4G fotopast", "/evolveo-strongvision-dual-pro-4g--fotopast-s-odesilanim-na-cloud-a-email/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7372_evolveo-strongvision-dual-pro-4g--fotopast-s-odesilanim-na-cloud-a-email.jpg?ff=1&x=100&y=100&q=85&ts=6a361b83&sg=8dda0505"),
+    ("Mobilní telefony", "EVOLVEO MaxPhone A1 – tlačítkový Dual SIM telefon", "/evolveo-maxphone-a1--tlacitkovy-dual-sim-telefon--cerny/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505"),
+    ("Audio", "EVOLVEO XSleep – polštářový Bluetooth reproduktor", "/evolveo-xsleep--polstarovy-bluetooth-reproduktor-na-spani--cerny/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/8446_evolveo-xsleep--pol--353-ta--345-ovy-bluetooth-reproduktor-na-spani--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=6a33985c&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision BAT3 V2 8000 mAh baterie", "/evolveo-strongvision-bat3--v2-8000mah-nahradni-baterie-pro-strongvision-usb-c/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7061-1_evolveo-strongvision-bat3--v2-8000mah-nahradni-baterie-pro-strongvision-usb-c.jpg?ff=1&x=100&y=100&q=85&ts=688c4708&sg=8dda0505"),
+    ("Fotopasti a bezpečnost", "EVOLVEO StrongVision adaptér 12 V / 2 A", "/evolveo-strongvision-adapter-12v2a/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/5034-1_evolveo-strongvision-adapter-12v2a.jpg?ff=1&x=100&y=100&q=85&ts=688c4707&sg=8dda0505"),
+)
+
+
+PRODUCTS = (
+    tuple(
+        {"category": category, "title": _display_name(path), "url": tracked_cubenest_url(path)}
+        for category, path in PRODUCT_PATHS
+    )
+    + tuple(
+        {"category": category, "title": title, "url": tracked_evolveo_url(path), "image": image}
+        for category, title, path, image in EVOLVEO_PRODUCTS
+    )
 )
 CATEGORIES = tuple(category for category, _ in Counter(item["category"] for item in PRODUCTS).items())
 
@@ -117,6 +145,9 @@ CATEGORY_IMAGES = {
     "Do auta": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/sq1c2/1.1.webp",
     "Apple Watch": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/reminky/orange-with-grey.png",
     "Zásuvky a kabely": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/powerstrip/1.jpg",
+    "Fotopasti a bezpečnost": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7567_evolveo-strongvision-compact-4k--fotopast-269-asosb--283-rna-kamera-32gb.jpg?ff=1&x=100&y=100&q=85&ts=688c4708&sg=8dda0505",
+    "Mobilní telefony": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505",
+    "Audio": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/8446_evolveo-xsleep--pol--353-ta--345-ovy-bluetooth-reproduktor-na-spani--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=6a33985c&sg=8dda0505",
 }
 
 assert set(CATEGORY_IMAGES) == set(CATEGORIES)

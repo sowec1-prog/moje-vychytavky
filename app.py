@@ -22,7 +22,7 @@ app = Flask(__name__)
 def index():
     category = request.args.get("category", "")
     products = [
-        {**item, "image": PRODUCT_IMAGES[unquote(item["url"].split("desturl=", 1)[1])]}
+        {**item, "image": item.get("image") or PRODUCT_IMAGES[unquote(item["url"].split("desturl=", 1)[1])]}
         for item in PRODUCTS
         if not category or item["category"] == category
     ]
