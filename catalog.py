@@ -134,14 +134,34 @@ EVOLVEO_PHONE_PRODUCTS = tuple(
     for item in json.loads((Path(__file__).with_name("evolveo_phones.json")).read_text(encoding="utf-8"))
 )
 
+PRICE_SNAPSHOT = json.loads((Path(__file__).with_name("product_prices.json")).read_text(encoding="utf-8"))
+PRICE_OBSERVED_AT = PRICE_SNAPSHOT["observed_at"]
+PRICES = PRICE_SNAPSHOT["prices"]
+
+
+def _price_for(url: str) -> int:
+    """Return a verified CZK price from the checked snapshot."""
+    return PRICES[url]
+
 
 PRODUCTS = (
     tuple(
-        {"category": category, "title": _display_name(path), "url": tracked_cubenest_url(path)}
+        {
+            "category": category,
+            "title": _display_name(path),
+            "url": tracked_cubenest_url(path),
+            "price": _price_for(MERCHANT_BASE + path),
+        }
         for category, path in PRODUCT_PATHS
     )
     + tuple(
-        {"category": category, "title": title, "url": tracked_evolveo_url(path), "image": image}
+        {
+            "category": category,
+            "title": title,
+            "url": tracked_evolveo_url(path),
+            "image": image,
+            "price": _price_for("https://eshop.evolveo.cz" + path),
+        }
         for category, title, path, image in (EVOLVEO_PRODUCTS + EVOLVEO_PHONE_PRODUCTS)
     )
 )

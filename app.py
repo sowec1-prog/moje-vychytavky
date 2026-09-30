@@ -11,7 +11,7 @@ from urllib.parse import unquote
 
 from flask import Flask, jsonify, render_template, request
 
-from catalog import CATEGORIES, CATEGORY_IMAGES, PRODUCTS
+from catalog import CATEGORIES, CATEGORY_IMAGES, PRICE_OBSERVED_AT, PRODUCTS
 from merchant_plan import MERCHANTS
 from product_images import PRODUCT_IMAGES
 
@@ -33,6 +33,7 @@ def index():
         category_images=CATEGORY_IMAGES,
         selected_category=category,
         total_products=len(PRODUCTS),
+        price_observed_at=PRICE_OBSERVED_AT,
         merchants=MERCHANTS,
         affiliate_approved=False,
     )
