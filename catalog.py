@@ -7,6 +7,8 @@ provides generated tracking links. No price or availability is asserted here.
 from __future__ import annotations
 
 from collections import Counter
+import json
+from pathlib import Path
 from urllib.parse import quote
 
 MERCHANT_BASE = "https://www.cubenest.cz"
@@ -125,6 +127,13 @@ EVOLVEO_PRODUCTS = (
     ("Fotopasti a bezpečnost", "EVOLVEO StrongVision adaptér 12 V / 2 A", "/evolveo-strongvision-adapter-12v2a/", "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/5034-1_evolveo-strongvision-adapter-12v2a.jpg?ff=1&x=100&y=100&q=85&ts=688c4707&sg=8dda0505"),
 )
 
+# Complete public phone range from EVOLVEO, captured 2026-09-30.
+# Kept as a checked-in snapshot so the static site builds without live scraping.
+EVOLVEO_PHONE_PRODUCTS = tuple(
+    ("Mobilní telefony", item["title"], item["path"], item["image"])
+    for item in json.loads((Path(__file__).with_name("evolveo_phones.json")).read_text(encoding="utf-8"))
+)
+
 
 PRODUCTS = (
     tuple(
@@ -133,7 +142,7 @@ PRODUCTS = (
     )
     + tuple(
         {"category": category, "title": title, "url": tracked_evolveo_url(path), "image": image}
-        for category, title, path, image in EVOLVEO_PRODUCTS
+        for category, title, path, image in (EVOLVEO_PRODUCTS + EVOLVEO_PHONE_PRODUCTS)
     )
 )
 CATEGORIES = tuple(category for category, _ in Counter(item["category"] for item in PRODUCTS).items())
