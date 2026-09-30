@@ -40,6 +40,27 @@ def price(value: str | None) -> int | None:
     return round(float(match.group(0).replace(",", "."))) if match else None
 
 
+def category_for(title: str) -> str:
+    """Use product type, not a merchant-wide catch-all category."""
+    name = title.lower()
+    if any(word in name for word in ("dárkový poukaz", "poukaz", "záruk", "kuchařka", "mouka na pizzu")):
+        return "Salente – Dárky a služby"
+    if any(word in name for word in ("mobilní klimatiz", "odvlhčova", "ochlazova", "čističk", "topidl", "teplovzdušn", "hotheat", "hottower", "waterstar", "summerice", "icemax")):
+        return "Salente – Vzduch, chlazení a topení"
+    vacuum_words = ("robotický vysavač", "tyčový vysavač", "ruční vysavač", "průmyslový vysavač", "vysavač pro mokré", "supervac", "provacs", "smartdust 3.1", "cleanpro")
+    if any(word in name for word in vacuum_words) and not any(word in name for word in ("filtr", "kartáč", "mop", "baterie", "hubice", "nádoba", "sáček", "hadice", "trubic", "zásobník", "držák", "adaptér", "páska", "válec", "kolečka", "klipy")):
+        return "Salente – Vysavače"
+    vacuum_accessories = (" vysavač", " pro r2", " pro g4", " pro l5", " pro l6", " pro l7", "cleanpro", "smartdust", "handyplus", "combo 4v1", "provacs")
+    if any(word in name for word in vacuum_accessories):
+        return "Salente – Příslušenství k vysavačům"
+    if any(word in name for word in ("osobní", "fitness váha", "ladysteam", "napařovač", "žehlič")):
+        return "Salente – Péče o tělo a prádlo"
+    kitchen_accessories = ("náhradní", "těsnění", "ventil", "ovládání", "sítko", "nádoba", "košík", "metla", "háky", "krouhač", "vařečka", "kleště", "prkénko", "poklice", "robo", "filtro", "mop", "pěnov")
+    if any(word in name for word in kitchen_accessories):
+        return "Salente – Kuchyňské příslušenství"
+    return "Salente – Kuchyňské spotřebiče"
+
+
 def product(url: str) -> tuple[dict | None, str | None]:
     try:
         page = fetch(url)
@@ -63,7 +84,7 @@ def product(url: str) -> tuple[dict | None, str | None]:
             return None, "not currently in stock"
         return {
             "merchant": "Salente",
-            "category": "Salente – kompletní sortiment",
+            "category": category_for(title),
             "title": re.sub(r"\s*[|×].*$", "", title).strip(),
             "url": url,
             "image": image,

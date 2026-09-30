@@ -217,8 +217,11 @@ CATEGORY_IMAGES = {
     "Cubenest – kompletní sortiment": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/e310/ctverec/20.jpg",
     "EVOLVEO – kompletní sortiment": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505",
     "Mobilegear – kompletní sortiment": MOBILEGEAR_SNAPSHOT["products"][0]["image"],
-    "Salente – kompletní sortiment": SALENTE_SNAPSHOT["products"][0]["image"],
 }
+CATEGORY_IMAGES.update({
+    category: next(item["image"] for item in SALENTE_SNAPSHOT["products"] if item["category"] == category)
+    for category in {item["category"] for item in SALENTE_SNAPSHOT["products"]}
+})
 
 assert set(CATEGORY_IMAGES) == set(CATEGORIES)
 assert len({item["url"] for item in PRODUCTS}) == len(PRODUCTS)
