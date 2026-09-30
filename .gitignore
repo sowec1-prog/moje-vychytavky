@@ -3,4 +3,5 @@ __pycache__/
 .venv/
 .env
 radar.sqlite3
+mobilegear_harvest_progress.jsonl
 .pytest_cache/
