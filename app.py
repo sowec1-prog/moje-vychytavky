@@ -35,7 +35,16 @@ def index():
         total_products=len(PRODUCTS),
         price_observed_at=PRICE_OBSERVED_AT,
         merchants=MERCHANTS,
-        affiliate_approved=False,
+        affiliate_approved=True,
+        evolveo_promo=[
+            next(item for item in PRODUCTS if phrase.lower() in item["title"].lower() and item.get("price", 0) > 100)
+            for phrase in (
+                "StrongVision PRO 4G II",
+                "StrongVision LTE MINI",
+                "StrongVision Solar 4G",
+                "Detective POE8 SMART, kamerový systém",
+            )
+        ],
     )
 
 
