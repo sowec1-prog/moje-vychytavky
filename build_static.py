@@ -1,6 +1,7 @@
 """Build a static, no-cost GitHub Pages version of the catalogue."""
 from datetime import date
 from pathlib import Path
+from shutil import copy2
 
 from app import app
 
@@ -38,5 +39,8 @@ html = html.replace('href="/privacy.html"', 'href="privacy.html"')
 ROOT = Path(__file__).parent
 for name in ("index.html", "privacy.html", "affiliate.html", "robots.txt", "sitemap.xml"):
     (ROOT / name).write_text((OUT / name).read_text(encoding="utf-8"), encoding="utf-8")
+
+for name in ("mojevychytavky-logo.svg", "mojevychytavky-logo.png"):
+    copy2(ROOT / name, OUT / name)
 
 print(f"static build: {OUT / 'index.html'}")

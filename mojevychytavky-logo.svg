@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">MojeVychytávky</title>
+  <desc id="desc">Zelené kruhové logo s písmenem M a žlutou jiskrou</desc>
+  <rect width="1080" height="1080" rx="240" fill="#12392e"/>
+  <circle cx="540" cy="540" r="420" fill="none" stroke="#8fe9c6" stroke-width="24" opacity=".9"/>
+  <path d="M276 740V344h112l152 188 152-188h112v396H690V521L540 706 390 521v219z" fill="#f8fffa"/>
+  <path d="M815 182l19 60 60 19-60 19-19 60-19-60-60-19 60-19z" fill="#ffdb66"/>
+  <path d="M250 822h580" stroke="#8fe9c6" stroke-width="24" stroke-linecap="round"/>
+</svg>
