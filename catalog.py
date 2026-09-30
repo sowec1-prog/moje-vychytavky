@@ -9,7 +9,7 @@ from __future__ import annotations
 from collections import Counter
 import json
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 MERCHANT_BASE = "https://www.cubenest.cz"
 EHUB_CLICK_BASE = "https://ehub.cz/system/scripts/click.php?a_aid=391b26f8&a_bid=231eaccc&desturl="
@@ -165,9 +165,38 @@ PRODUCTS = (
         for category, title, path, image in (EVOLVEO_PRODUCTS + EVOLVEO_PHONE_PRODUCTS)
     )
 )
+# Full current catalogue snapshot, verified against public product pages.
+# The old curated categories remain wherever a product already belonged to one;
+# all other products are discoverable under a merchant-wide complete catalogue.
+CURATED_CATEGORIES = {
+    unquote(item["url"].split("desturl=", 1)[1]): item["category"]
+    for item in PRODUCTS
+}
+COMPLETE_SNAPSHOT = json.loads((Path(__file__).with_name("complete_catalog.json")).read_text(encoding="utf-8"))
+PRICE_OBSERVED_AT = COMPLETE_SNAPSHOT["observed_at"]
+
+
+def tracked_public_url(merchant: str, url: str) -> str:
+    if merchant == "Cubenest":
+        return EHUB_CLICK_BASE + quote(url, safe="")
+    if merchant == "EVOLVEO":
+        return EVOLVEO_CLICK_BASE + quote(url, safe="")
+    raise ValueError(f"Unsupported merchant: {merchant}")
+
+
+PRODUCTS = tuple(
+    {
+        "category": CURATED_CATEGORIES.get(item["url"], item["category"]),
+        "title": item["title"],
+        "url": tracked_public_url(item["merchant"], item["url"]),
+        "image": item["image"],
+        "price": item["price"],
+    }
+    for item in COMPLETE_SNAPSHOT["products"]
+)
 CATEGORIES = tuple(category for category, _ in Counter(item["category"] for item in PRODUCTS).items())
 
-# Official product imagery, used only to visually identify the matching category.
+# Official merchant imagery only identifies filters; every product card has its own image.
 CATEGORY_IMAGES = {
     "MagSafe a Qi2": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/e310/ctverec/20.jpg",
     "Nabíječky a cestování": "https://www.cubenest.cz/resize/af/400/400/files/cubenestproducts/3.s3d0/cerna-nove-logo/2.jpg",
@@ -177,6 +206,8 @@ CATEGORY_IMAGES = {
     "Fotopasti a bezpečnost": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7567_evolveo-strongvision-compact-4k--fotopast-269-asosb--283-rna-kamera-32gb.jpg?ff=1&x=100&y=100&q=85&ts=688c4708&sg=8dda0505",
     "Mobilní telefony": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505",
     "Audio": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/8446_evolveo-xsleep--pol--353-ta--345-ovy-bluetooth-reproduktor-na-spani--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=6a33985c&sg=8dda0505",
+    "Cubenest – kompletní sortiment": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/e310/ctverec/20.jpg",
+    "EVOLVEO – kompletní sortiment": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505",
 }
 
 assert set(CATEGORY_IMAGES) == set(CATEGORIES)
