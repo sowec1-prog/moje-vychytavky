@@ -47,9 +47,12 @@ def product(url: str) -> tuple[dict | None, str | None]:
         title = meta.get("og:title") or meta.get("twitter:title")
         image = meta.get("og:image")
         amount = price(meta.get("product:price:amount") or meta.get("price"))
-        # Salente's current Shoptet details expose availability in the rendered page,
-        # but not in an Open Graph availability meta field.
-        in_stock = "Skladem" in page and "Momentálně nedostupné" not in page and "Vyprodáno" not in page
+        # Salente's details expose Schema.org availability. The rendered Czech label
+        # remains a fallback for pages where the structured block is absent.
+        in_stock = (
+            "https://schema.org/InStock" in page
+            or ('Skladem' in page and 'Momentálně nedostupné' not in page and 'Vyprodáno' not in page)
+        )
         if not (title and image and amount is not None):
             return None, "missing title, image or price"
         if amount <= 1:

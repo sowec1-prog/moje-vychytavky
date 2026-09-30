@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-09-30T13:37:36+00:00",
+  "observed_at": "2026-09-30T13:40:55+00:00",
   "source_count": 222,
   "products": [
     {
@@ -248,6 +248,15 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente baterie 2750 mAh pro robotický vysavač G4 ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-baterie-2750-mah-pro-roboticky-vysavac-g4/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/781_salente-baterie-2750-mah-pro-roboticky-vysava--269--g4.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 949,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente baterie 5200 mAh pro robotický vysavač L7 ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-baterie-5200-mah-pro-roboticky-vysavac-l7/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/638_salente-baterie-5200-mah-pro-roboticky-vysava--269--l7.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -401,6 +410,60 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente Combo, 4v1 uchytávací klipy ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo--4v1-uchytavaci-klipy/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/336_salente-combo--4v1-uchytavaci-klipy.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 45,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "SALENTE Combo 4v1, malá stříkací hlava ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo-4v1--mala-strikaci-hlava/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/354_salente-combo-4v1--mala-st--345-ikaci-hlava.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 199,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "SALENTE Combo 4v1, nosník kolečka ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo-4v1--nosnik-kolecka/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/330_salente-combo-4v1--nosnik-kole--269-ka.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 99,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "SALENTE Combo 4v1, velká stříkací hlava ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo-4v1--velka-strikaci-hlava/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/333_salente-combo-4v1--velka-st--345-ikaci-hlava.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 389,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente Combo 4v1, vysavač pro mokré a suché vysávání, tepovač, fukar ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo-4v1--vysavac-pro-mokre-a-suche-vysavani--tepovac--fukar/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/300-2_salente-combo-4v1--vysava--269--pro-mokre-a-suche-vysavani--tepova--269-fukar.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 3490,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente Combo 4v1 SS, vysavač pro mokré a suché vysávání, tepovač, fukar, nerez nádoba ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-combo-4v1-ss--vysavac-pro-mokre-a-suche-vysavani--tepovac--fukar--nerez-nadoba/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/696-7_salente-combo-4v1-ss--vysava--269--pro-mokre-a-suche-vysavani--tepova--269-fukar--nerez-nadoba.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 3590,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente Cuco II, multifunkční hrnec ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-cuco-ii--multifunkcni-hrnec/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/685_salente-cuco-ii--multifunk--269-ni-hrnec.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -545,6 +608,24 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente G4, robotický vysavač, stírání vodou, UVC sterilizace, bílý ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-g4--roboticky-vysavac--stirani-vodou--uvc-sterilizace--bily/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/691_salente-g4--roboticky-vysava--269-stirani-vodou--uvc-sterilizace--bily.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 2990,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente G4 robotický vysavač - vytírání, UVC, černý",
+      "url": "https://eshop.salente.cz/salente-g4--roboticky-vysavac--stirani-vodou--uvc-sterilizace--cerny/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/207_salente-g4--roboticky-vysava--269-stirani-vodou--uvc-sterilizace--269-erny.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 2990,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente G4 - Magnetická páska ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-g4-magneticka-paska/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/2246_salente-g4-magneticka-paska.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -666,6 +747,15 @@
       "url": "https://eshop.salente.cz/salente-hottower--teplovzdusny-sloupovy-ventilator--cerny/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/705_salente-hottower--teplovzdu--353-ny-sloupovy-ventilator--269-erny.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
       "price": 3990,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente hubice na čalounění pro vysavače Combo 4v1 a ProVacs ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-hubice-na-calouneni-pro-vysavace-combo-4v1-a-provacs/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/878_salente-hubice-na-269-aloun--283-ni-pro-vysava--269-e-combo-4v1-a-provacs.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 99,
       "currency": "CZK"
     },
     {
@@ -905,6 +995,24 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente Mixi TJ, mixovací varná nádoba ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-mixi-tj--mixovaci-varna-nadoba/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/276_salente-mixi-tj--mixovaci-varna-nadoba.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 499,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente Mixi VA, vakuová mixovací nádoba ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-mixi-va--vakuova-mixovaci-nadoba/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/279_salente-mixi-va--vakuova-mixovaci-nadoba.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 890,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente Mixxo multifunkční tyčový mixér 3v1, 1200 W, nerez, černý ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-mixxo-multifunkcni-tycovy-mixer-3v1--1200-w--nerez--cerny/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/953-19_salente-mixxo-multifunk--269-ni-ty--269-ovy-mixer-3v1--1200-w--nerez--269-erny.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -918,6 +1026,15 @@
       "url": "https://eshop.salente.cz/salente-mop-pro-l5-l6-l7-g4/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/112_salente-mop-pro-l5-l6-l7-g4.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
       "price": 40,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente mop pro R2 ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-mop-pro-r2/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/246_salente-mop-pro-r2.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 49,
       "currency": "CZK"
     },
     {
@@ -986,10 +1103,37 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente ProVacs, průmyslový vysavač a fukar 4v1, žlutý",
+      "url": "https://eshop.salente.cz/salente-provacs--prumyslovy-viceucelovy-vysavac-a-fukar-4v1--zluty/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/818-8_salente-provacs--pr--367-myslovy-viceu--269-elovy-vysava--269--a-fukar-4v1--382-luty.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 1490,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente QuickDry, sušička ovoce, nerez ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-quickdry--susicka-ovoce--nerez/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/708_salente-quickdry--su--353-i--269-ka-ovoce--nerez.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
       "price": 5990,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente R2, robotický vysavač, stírání vodou, nabíjecí stanice, bílý ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-r2--roboticky-vysavac--stirani-vodou--nabijeci-stanice--bily/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/4606_salente-r2--roboticky-vysava--269-stirani-vodou--nabijeci-stanice--bily.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 2490,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente R2, robotický vysavač, stírání vodou, nabíjecí stanice, černý ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-r2--roboticky-vysavac--stirani-vodou--nabijeci-stanice--cerny/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/213_salente-r2--roboticky-vysava--269-stirani-vodou--nabijeci-stanice--269-erny.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 2490,
       "currency": "CZK"
     },
     {
@@ -1139,6 +1283,15 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "SALENTE SmartDust, nádoba na prach ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-smartdust--nadoba-na-prach/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/453_salente-smartdust--nadoba-na-prach.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 329,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "SALENTE SmartDust, napájecí adaptér ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-smartdust--napajeci-adapter/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/465_salente-smartdust--napajeci-adapter.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -1175,10 +1328,28 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente SmartDust 3.1, tyčový vysavač s mokrým stíráním ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-smartdust-3-1--tycovy-vysavac-s-mokrym-stiranim/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/411_salente-smartdust-3-1--ty--269-ovy-vysava--269--s-mokrym-stiranim.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 3490,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente SteelChef, kuchyňská váha, 5 kg, nerezová ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-steelchef--kuchynska-vaha--5-kg--nerezova/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/722_salente-steelchef--kuchy--328-ska-vaha--5-kg--nerezova.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
       "price": 249,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
+      "title": "Salente štěrbinová hubice",
+      "url": "https://eshop.salente.cz/salente-sterbinova-hubice-pro-vysavace-combo-4v1-a-provacs/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/342_salente-353-t--283-rbinova-hubice-pro-vysava--269-e-combo-4v1-a-provacs.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 99,
       "currency": "CZK"
     },
     {
@@ -1337,6 +1508,15 @@
     {
       "merchant": "Salente",
       "category": "Salente – kompletní sortiment",
+      "title": "Salente zásobník na vodu pro R2 ׀ Salente.cz",
+      "url": "https://eshop.salente.cz/salente-zasobnik-na-vodu-pro-r2/",
+      "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/258_salente-zasobnik-na-vodu-pro-r2.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
+      "price": 199,
+      "currency": "CZK"
+    },
+    {
+      "merchant": "Salente",
+      "category": "Salente – kompletní sortiment",
       "title": "Salente zvýhodněná sada FlamePro a Meatplus, kontaktní gril a mlýnek na maso ׀ Salente.cz",
       "url": "https://eshop.salente.cz/salente-zvyhodnena-sada-flamepro-a-meatplus--kontaktni-gril-a-mlynek-na-maso/",
       "image": "https://cdn.myshoptet.com/usr/eshop.salente.cz/user/shop/big/2240_enlargement.jpg?ff=1&x=1024&y=1024&q=85&ts=6a3e66be&sg=38cb01fe",
@@ -1443,10 +1623,6 @@
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-baterie-2750-mah-pro-roboticky-vysavac-g4/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-baterie-3200-mah-pro-roboticky-vysavac-l6/",
       "reason": "placeholder or missing current price"
     },
@@ -1455,48 +1631,16 @@
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-combo--4v1-uchytavaci-klipy/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-combo-4v1--davkovac-vody/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-combo-4v1--mala-strikaci-hlava/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-combo-4v1--nosnik-kolecka/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-combo-4v1--papirovy-prachovy-sacek/",
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-combo-4v1--velka-strikaci-hlava/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-combo-4v1--vysavac-pro-mokre-a-suche-vysavani--tepovac--fukar/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-combo-4v1-ss--vysavac-pro-mokre-a-suche-vysavani--tepovac--fukar--nerez-nadoba/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-digichef--kuchynsky-robot-6v1--misa-6-litru--digitalni-displej-2/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-g4--roboticky-vysavac--stirani-vodou--uvc-sterilizace--bily/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-g4--roboticky-vysavac--stirani-vodou--uvc-sterilizace--cerny/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-handyplus--baterie-3-7v-2000mah/",
@@ -1509,10 +1653,6 @@
     {
       "url": "https://eshop.salente.cz/salente-hlavni-filtr-prachoveho-zasobniku-pro-l5-l6-l7-g4/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-hubice-na-calouneni-pro-vysavace-combo-4v1-a-provacs/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-jetsteam-pro--hadrik-na-sterku-na-okna/",
@@ -1539,18 +1679,6 @@
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-mixi-tj--mixovaci-varna-nadoba/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-mixi-va--vakuova-mixovaci-nadoba/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-mop-pro-r2/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-pravy-kartac-pro-l5-l6-l7-g4/",
       "reason": "placeholder or missing current price"
     },
@@ -1567,20 +1695,8 @@
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-provacs--prumyslovy-viceucelovy-vysavac-a-fukar-4v1--zluty/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-provacs--textilni-filtracni-sacek-pro-vysavac-provacs/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-r2--roboticky-vysavac--stirani-vodou--nabijeci-stanice--bily/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-r2--roboticky-vysavac--stirani-vodou--nabijeci-stanice--cerny/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-rombo--kuchynsky-robot-s-odstavnovacem/",
@@ -1599,20 +1715,8 @@
       "reason": "placeholder or missing current price"
     },
     {
-      "url": "https://eshop.salente.cz/salente-smartdust--nadoba-na-prach/",
-      "reason": "not currently in stock"
-    },
-    {
       "url": "https://eshop.salente.cz/salente-smartdust--tri-hubice/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-smartdust-3-1--tycovy-vysavac-s-mokrym-stiranim/",
-      "reason": "not currently in stock"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-sterbinova-hubice-pro-vysavace-combo-4v1-a-provacs/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-sterbinova-hubice-pro-vysavace-combo-4v1-a-supervac/",
@@ -1629,10 +1733,6 @@
     {
       "url": "https://eshop.salente.cz/salente-vnitrni-teflonovy-hrnec-6l-ario-cuco/",
       "reason": "placeholder or missing current price"
-    },
-    {
-      "url": "https://eshop.salente.cz/salente-zasobnik-na-vodu-pro-r2/",
-      "reason": "not currently in stock"
     },
     {
       "url": "https://eshop.salente.cz/salente-zasobnik-prachu-pro-l5-l6-l7-g4/",
