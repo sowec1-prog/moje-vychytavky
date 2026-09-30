@@ -174,8 +174,10 @@ CURATED_CATEGORIES = {
 }
 COMPLETE_SNAPSHOT = json.loads((Path(__file__).with_name("complete_catalog.json")).read_text(encoding="utf-8"))
 MOBILEGEAR_SNAPSHOT = json.loads((Path(__file__).with_name("mobilegear_products.json")).read_text(encoding="utf-8"))
-PRICE_OBSERVED_AT = max(COMPLETE_SNAPSHOT["observed_at"], MOBILEGEAR_SNAPSHOT["observed_at"])
+SALENTE_SNAPSHOT = json.loads((Path(__file__).with_name("salente_products.json")).read_text(encoding="utf-8"))
+PRICE_OBSERVED_AT = max(COMPLETE_SNAPSHOT["observed_at"], MOBILEGEAR_SNAPSHOT["observed_at"], SALENTE_SNAPSHOT["observed_at"])
 MOBILEGEAR_CLICK_BASE = "https://ehub.cz/system/scripts/click.php?a_aid=391b26f8&a_bid=2e8d2a50&desturl="
+SALENTE_CLICK_BASE = "https://ehub.cz/system/scripts/click.php?a_aid=391b26f8&a_bid=e945dbdb&desturl="
 
 
 def tracked_public_url(merchant: str, url: str) -> str:
@@ -185,6 +187,8 @@ def tracked_public_url(merchant: str, url: str) -> str:
         return EVOLVEO_CLICK_BASE + quote(url, safe="")
     if merchant == "Mobilegear":
         return MOBILEGEAR_CLICK_BASE + quote(url, safe="")
+    if merchant == "Salente":
+        return SALENTE_CLICK_BASE + quote(url, safe="")
     raise ValueError(f"Unsupported merchant: {merchant}")
 
 
@@ -196,7 +200,7 @@ PRODUCTS = tuple(
         "image": item["image"],
         "price": item["price"],
     }
-    for item in (COMPLETE_SNAPSHOT["products"] + MOBILEGEAR_SNAPSHOT["products"])
+    for item in (COMPLETE_SNAPSHOT["products"] + MOBILEGEAR_SNAPSHOT["products"] + SALENTE_SNAPSHOT["products"])
 )
 CATEGORIES = tuple(category for category, _ in Counter(item["category"] for item in PRODUCTS).items())
 
@@ -213,6 +217,7 @@ CATEGORY_IMAGES = {
     "Cubenest – kompletní sortiment": "https://www.cubenest.cz/resize/e/800/800/files/cubenestproducts/e310/ctverec/20.jpg",
     "EVOLVEO – kompletní sortiment": "https://cdn.myshoptet.com/usr/eshop.evolveo.cz/user/shop/related/7426_evolveo-maxphone-a1--tla--269-itkovy-dual-sim-telefon--269-erny.jpg?ff=1&x=100&y=100&q=85&ts=688c470b&sg=8dda0505",
     "Mobilegear – kompletní sortiment": MOBILEGEAR_SNAPSHOT["products"][0]["image"],
+    "Salente – kompletní sortiment": SALENTE_SNAPSHOT["products"][0]["image"],
 }
 
 assert set(CATEGORY_IMAGES) == set(CATEGORIES)
