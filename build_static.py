@@ -32,7 +32,7 @@ html = html.replace('href="/privacy.html"', 'href="privacy.html"')
 
 (OUT / "privacy.html").write_text("""<!doctype html><meta charset=\"utf-8\"><title>Soukromí | Moje vychytávky</title><main><h1>Soukromí</h1><p>Tento katalog sám neobsahuje formuláře, uživatelské účty ani vlastní analytické cookies.</p><p>Při otevření odkazu na produkt přechází návštěvník na web daného obchodníka; jeho zásady soukromí platí samostatně.</p><p>Kontaktní e-mail bude doplněn před spuštěním partnerských odkazů.</p></main>""", encoding="utf-8")
 
-(OUT / "affiliate.html").write_text("""<!doctype html><meta charset=\"utf-8\"><title>Partnerské odkazy | Moje vychytávky</title><main><h1>Partnerské odkazy</h1><p>Aktuálně tento web používá jen běžné odkazy na obchody, bez provizního měření.</p><p>Po schválení příslušných partnerských programů budou provizní odkazy zřetelně označeny. Nákup tím kupujícímu nezdraží.</p></main>""", encoding="utf-8")
+(OUT / "affiliate.html").write_text("""<!doctype html><meta charset=\"utf-8\"><title>Partnerské odkazy | Moje vychytávky</title><main><h1>Partnerské odkazy</h1><p>Některé odkazy na tomto webu jsou partnerské. Při nákupu přes takový odkaz může web získat provizi; pro kupujícího se cena nemění.</p><p>Cena, dostupnost, doprava a podmínky akcí se vždy řídí aktuální nabídkou obchodníka v okamžiku objednávky.</p></main>""", encoding="utf-8")
 
 # Cloudflare Pages is configured with the repository root as the output folder.
 # Keep the generated public assets there as well as in docs/ (for GitHub Pages).

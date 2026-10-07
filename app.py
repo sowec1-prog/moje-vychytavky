@@ -45,6 +45,10 @@ def index():
                 "Detective POE8 SMART, kamerový systém",
             )
         ],
+        cubenest_promo=next(
+            item for item in PRODUCTS
+            if item["title"] == "Cubenest GaN nabíječka 140W S5D0"
+        ),
     )
 
 
